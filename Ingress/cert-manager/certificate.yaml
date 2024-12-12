@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+apiVersion: cert-manager.io/v1  
+kind: Certificate 
+metadata:
+  name: appbackend-tls-cert  
+  namespace: default  
+spec:
+  dnsNames:
+    - testapi.georgeajayilabs.com.ng  
+  secretName: testapi-tls  
+  issuerRef:
+    name: letsencrypt-cluster-issuer  
+    kind: ClusterIssuer  
